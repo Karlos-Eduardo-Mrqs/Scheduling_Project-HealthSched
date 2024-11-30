@@ -1,0 +1,460 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: snow;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 100px;
+    height: 100vh;
+    background-color: #66CDAA;
+    color: #fff;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease, background-color 0.3s ease;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.sidebar:hover {
+    width: 350px;
+    background-color: #66CDAA;
+    border: 1px solid #1b956c;
+}
+
+/* Ajustes no cabeçalho da sidebar */
+.sidebar-header {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar-header .logo {
+    margin-right: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    width: 100%;
+}
+
+.sidebar-menu li a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: background 0.3s ease-in-out;
+}
+
+.sidebar-menu li a:hover {
+    background-color: snow;
+    color: black;
+}
+
+.sidebar-menu li a:hover .menu-icon {
+    filter: brightness(1) invert(0);
+}
+
+.menu-icon, .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+/* Esconde o texto dos links quando a sidebar está fechada */
+.menu-text {
+    display: none;
+    font-weight: bolder;
+    text-align: start;
+    white-space: nowrap;
+}
+
+/* Exibe o texto dos links quando a sidebar está expandida */
+.sidebar:hover .menu-text {
+    display: inline-block;
+    margin-left: 20px;
+    align-self: center;
+}
+
+/* Painel de conteúdo */
+.painel {
+    margin-left: 80px;
+    padding: 40px;
+    transition: margin-left 0.5s ease;
+}
+
+.sidebar:hover ~ .painel {
+    margin-left: 350px;
+}
+
+/* Pesquisa e resultado */
+.pesquisa, .resultado {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.container-pesquisa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+select, button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+select {
+    background-color: #fff;
+    color: black;
+    width: 200px;
+}
+
+button {
+    background-color: #66CDAA;
+    color: #fff;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1b956c;
+}
+
+.resultado {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para a tabela */
+table.users {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+table.users th, table.users td {
+    padding: 10px 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+table.users th {
+    background-color: #66CDAA;
+    color: snow;
+    text-transform: uppercase;
+}
+
+table.users tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table.users tr:hover {
+    background-color: #1b956c;
+    color: snow;
+}
+
+/* Estilos de mensagens de feedback */
+body.sucesso::before {
+    content: attr(data-mensagem);
+    display: block;
+    background-color: #2ecc71;
+    color: snow;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+body.erro::before {
+    content: attr(data-mensagem);
+    display: block;
+    background-color: #e74c3c;
+    color: snow;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Botões de ação */
+.edit, .del, .save-btn {
+    text-decoration: none;
+    color: snow;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s;
+    display: inline-block;
+}
+
+.edit-nome,.edit-email{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo ao focar no input */
+table.users input:focus{
+    border-color: #66CDAA;
+    box-shadow: 0 0 5px rgba(102, 205, 170, 0.5), 0 0 10px rgba(102, 205, 170, 0.3);
+    outline: none;
+}
+
+/* Estilos gerais da tabela de profissionais */
+table.professionals {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para os títulos das colunas */
+table.professionals th {
+    background-color: #66CDAA;
+    color: snow;
+    text-transform: uppercase;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+/* Estilo para as células de dados */
+table.professionals td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+/* Estilo para as linhas alternadas da tabela */
+table.professionals tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Estilo para as linhas ao passar o mouse */
+table.professionals tr:hover {
+    background-color: #1b956c;
+    color: snow;
+}
+
+/* Estilo para os inputs dentro das células da tabela */
+table.professionals input[type='text'],
+table.professionals input[type='email'],
+table.professionals select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo ao focar no input */
+table.professionals input:focus, 
+table.professionals select:focus {
+    border-color: #66CDAA;
+    box-shadow: 0 0 5px rgba(102, 205, 170, 0.5), 0 0 10px rgba(102, 205, 170, 0.3);
+    outline: none;
+}
+
+/* Estilos dos botões de editar e deletar */
+table.professionals .edit, 
+table.professionals .del-pro {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    color: snow;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Botão editar */
+table.professionals .edit {
+    background-color: #4CAF50;
+}
+
+/* Botão deletar */
+table.professionals .del-pro {
+    background-color: #f44336;
+}
+
+/* Efeitos de hover nos botões */
+table.professionals .edit:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+table.professionals .del-pro:hover {
+    background-color: #d32f2f;
+    transform: translateY(-2px);
+}
+
+/* Efeito ativo (quando clicado) nos botões */
+table.professionals .edit:active,
+table.professionals .del-pro:active {
+    transform: translateY(1px);
+}
+
+/* Estilos para o select de área e especialidade */
+table.professionals select {
+    background-color: #fff;
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Estilos de mensagem de erro na tabela */
+table.professionals .error {
+    background-color: #e74c3c;
+    color: snow;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+/* Botão editar */
+.edit {
+    background-color: #4CAF50;
+}
+
+/* Botão deletar */
+.del {
+    background-color: #f44336;
+}
+
+/* Botão salvar */
+.save-btn {
+    background-color: #2ecc71;
+}
+
+/* Efeitos de hover */
+.edit:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.del:hover {
+    background-color: #d32f2f;
+    transform: translateY(-2px);
+}
+
+.save-btn:hover {
+    background-color: #1b956c;
+    transform: translateY(-2px);
+}
+
+/* Efeito ativo (quando clicado) */
+.edit:active, .del:active, .save-btn:active {
+    transform: translateY(1px);
+}
+
+
+/* Pop-up de confirmação de deleção */
+.pop {
+    display: none;
+    position: relative;
+    z-index: 10;
+    background-color: snow;
+    box-shadow: 5px 5px 15px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#pair {
+    color: none;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.popup-del-back {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-del {
+    display: flex;
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    color: snow;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 40%;
+    height: 200px;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: opacity 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#message-del {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 20px;
+}
+
+.popup-del button {
+    width: 80%;
+    height: 35px;
+    margin: 5px auto;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    cursor: pointer;
+    border: none;
+}
+
+.popup-del button:hover {
+    background-color: #1b956c;
+    color: #fff;
+}

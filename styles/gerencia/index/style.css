@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: snow;
+}
+
+/* Sidebar *//* Sidebar */
+.sidebar {
+    width: 100px;
+    height: 100vh;
+    background-color: #66CDAA;
+    color: #fff;
+    position: fixed; /* Altera para sticky */
+    top: 0; /* Fixa no topo quando rolar */
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease, background-color 0.3s ease;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.sidebar:hover {
+    width: 350px;
+    background-color: #66CDAA;
+    border: 1px solid #1b956c;
+}
+
+/* Ajustes no cabeçalho da sidebar */
+.sidebar-header {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar-header .logo {
+    margin-right: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    width: 100%;
+}
+
+.sidebar-menu li a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: background 0.3s ease-in-out;
+}
+
+.sidebar-menu li a:hover {
+    background-color: snow;
+    color: black;
+}
+
+.sidebar-menu li a:hover .menu-icon {
+    filter: brightness(1) invert(0);
+}
+
+.menu-icon, .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+/* Esconde o texto dos links quando a sidebar está fechada */
+.menu-text {
+    display: none; /* Texto oculto inicialmente */
+    font-weight: bolder;
+    text-align: start;
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+}
+
+/* Exibe o texto dos links quando a sidebar está expandida */
+.sidebar:hover .menu-text {
+    display: inline-block; /* Exibe o texto ao expandir a sidebar */
+    margin-left: 20px; /* Espaço entre o ícone e o texto */
+    align-self: center  ; /* Alinha o texto à esquerda */
+}
+
+.sidebar:hover ~ .main-content {
+    margin-left: 350px; /* Move o painel quando a sidebar está expandida */
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    flex: 1;
+    transition: margin-left 0.5s ease;
+}
+
+.content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.btn-sair {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: crimson;
+    color: snow;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-sair:hover {
+    background-color: red;
+}
+
+.pop {
+    display: none; 
+    position: relative; 
+    z-index: 10; 
+    background-color: snow;
+    box-shadow: 5px 5px 15px; 
+    padding: 10px; 
+    border-radius: 10px;
+    text-align: center;
+}
+
+#pair {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.estatisticas {
+    background-color: #ffffff; /* Fundo branco */
+    border: 1px solid #ddd; /* Borda cinza claro */
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px 0; /* Margem superior e inferior */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center;
+}
+
+.estatisticas h2 {
+    text-align: center;
+    margin-bottom: 15px; /* Margem inferior do título */
+    font-size: 1.5em; /* Tamanho da fonte do título */
+    color: #333; /* Cor do texto do título */
+    border-bottom: 2px solid #1b956c; /* Linha abaixo do título */
+    padding-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+.estatisticas p {
+    margin: 10px 0; /* Margem em cima e embaixo do parágrafo */
+    font-size: 1.1em; /* Tamanho da fonte dos parágrafos */
+}

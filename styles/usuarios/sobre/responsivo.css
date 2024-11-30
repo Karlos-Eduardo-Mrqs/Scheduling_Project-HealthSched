@@ -1,0 +1,147 @@
+/* responsive.css */
+@media screen and (max-width: 1190px) {
+    .item-entrar a, .item a {
+        padding: 8px 12px;
+        font-size: 10px;
+    }
+
+    .item-entrar {
+        margin-left: auto;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .item,.item-entrar {
+        margin-left: auto;
+        padding-right: 15px;
+        font-size: 10px;
+    }
+    
+    .item-entrar a {
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 1024px) {
+    #menu {
+        display: none; /* O menu estará oculto por padrão */
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh; /* O menu ocupa toda a altura da tela */
+        background-color: #333; /* Cor de fundo do menu */
+        flex-direction: column; /* Alinha os itens verticalmente */
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 20px; /* Espaçamento no topo do menu */
+        transition: all 0.3s ease-in-out; /* Transição suave */
+    }
+
+    .item-logo {
+        display: block; /* Exibe a logo dentro do menu */
+        max-width: 150px;
+        margin-bottom: 20px; /* Espaçamento abaixo da logo */
+    }
+
+    .menu-icon {
+        display: flex; /* Torna o ícone do menu visível */
+        cursor: pointer;
+        font-size: 30px;
+        justify-content: center;
+        max-width: 150px;
+        margin-bottom: 20px;
+    }
+
+    .closeMenu {
+        display: block; /* Exibe o botão X de fechar */
+        cursor: pointer;
+        font-size: 30px;
+        color: snow;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+
+    /* Itens do menu dentro do menu expansível */
+    .menu-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Espaçamento entre os itens do menu */
+        margin-top: 50px;
+    }
+
+    /* Esconde os itens padrão da navbar */
+    .item, .item-entrar {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .list-item {
+        flex-direction: column;
+        padding: 0; /* Remover padding horizontal */
+    }
+
+    .item {
+        margin: 10px 0; /* Espaçamento vertical entre itens */
+    }
+
+    .about-section {
+        padding: 20px;
+        font-size: 1rem; /* Ajustar o tamanho da fonte */
+    }
+
+    .social-links img {
+        width: 30px; /* Diminuir o tamanho das imagens de redes sociais */
+        margin: 0 10px; /* Espaçamento entre os ícones */
+    }
+
+    #menu {
+        width: 100%; /* Menu ocupa toda a largura da tela */
+        display: none; /* Esconder menu por padrão */
+    }
+
+    .menu-icon {
+        display: block; /* Mostrar ícone do menu */
+        cursor: pointer;
+        font-size: 30px; /* Aumentar o tamanho do ícone */
+    }
+
+    .closeMenu {
+        display: block; /* Mostrar botão de fechar */
+        font-size: 30px; /* Aumentar o tamanho do botão */
+        background: none; /* Remover fundo do botão */
+        border: none; /* Remover borda */
+        cursor: pointer; /* Cursor pointer */
+    }
+}
+
+/* Estilos para tablets e dispositivos maiores */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .nav-bar {
+        flex-direction: row; /* Manter nav-bar em linha */
+        justify-content: space-between;
+    }
+
+    .about-section {
+        padding: 40px;
+        font-size: 1.1rem; /* Aumentar um pouco o tamanho da fonte */
+    }
+}
+
+/* Estilos para desktop */
+@media (min-width: 1025px) {
+    .about-section {
+        padding: 60px;
+        font-size: 1.2rem; /* Aumentar o tamanho da fonte para desktops */
+    }
+}

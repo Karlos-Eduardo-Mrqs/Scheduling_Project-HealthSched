@@ -1,0 +1,92 @@
+/* Reset de margens e espaçamentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da Página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: aliceblue;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Barra de Navegação */
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #66CDAA; /* Azul escuro moderno */
+    height: 70px;
+}
+
+.list-item {
+    display: flex;
+    list-style: none;
+}
+
+.item-logo img {
+    height: 50px;
+    width: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.item-logo img:hover {
+    transform: scale(1.1); /* Leve efeito de zoom ao passar o mouse */
+}
+
+/* Seção Principal */
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    background-color: #e3e8ea; /* Cinza suave */
+    flex-grow: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #66CDAA; /* Azul escuro */
+}
+
+/* Links da Seção */
+.links {
+    display: flex;
+    gap: 50px;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 30px;
+    background-color: #66CDAA; /* Azul brilhante */
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.links a:hover {
+    background-color: #ECF0F1; /* Azul escuro no hover */
+    transform: translateY(-5px); /* Leve efeito de elevação ao passar o mouse */
+    color: black;
+}
+
+@media (max-width: 768px) {
+    /* Layout responsivo */
+    .links {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

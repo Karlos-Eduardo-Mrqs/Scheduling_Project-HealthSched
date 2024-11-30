@@ -1,0 +1,182 @@
+* { /*Todos Os Elementos*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { /*Corpo*/
+    display: flex;
+    flex-direction: column;
+    background-color: snow;
+    font-family: Arial, sans-serif; /* Adicionando uma fonte padrão */
+}
+
+.item-logo img { /*Logo da Barra De Navegação*/ 
+    width: 150px;
+    margin: 10px;
+    border-radius: 10px;
+    height: 50px;
+}
+
+.nav-bar { /*Barra De Navegação*/
+    display: flex;
+    width: 100%;
+    background-color: #66CDAA;
+    height: 60px;
+    align-items: center;
+}
+
+.list-item { /*Itens Da Barra De Navegação*/
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.item a, .item-entrar a { /*Ancoras Dos Itens Da Barra De Navegação*/
+    border-radius: 15px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    width: fit-content;
+    padding: 15px;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in; /* Transição mais suave */
+}
+
+.item-entrar { /*Item Entrar Da Barra De Navegação*/
+    margin-left: auto;
+}
+
+.item a:hover, .item-entrar a:hover{/* Efeito de foco */
+    background-color: #fff;
+    color: #464646;
+}
+
+.about-section { /*Seção Sobre */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    border: 1px solid #464646 ;
+}
+
+.about-section h1, .about-section h2 { /*Títulos Nível Um e Dois Da Seção Sobre */
+    text-align: center;
+    margin-bottom: 25px;
+    color: #464646;
+}
+
+.about-section h1{
+    content:" ";
+    width: 100%; /*aqui vc coloca o tamanho que quer que ocupe*/
+    border-bottom: 1px solid #464646;
+}
+
+.about-section p { /* Paragrafo Da Seção Sobre */
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: justify;
+}
+
+.social-links { /* Links Das Redes Socias*/
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-links a { /* Ancoras Dos Links Das Redes Socias*/
+    text-decoration: none;
+    color: #007BFF; /* Cor azul para links */
+    font-weight: bold;
+    margin: 0 10px; /* Espaçamento entre links */
+    padding: 5px 10px; /* Adicionando algum preenchimento */
+    border: 1px solid transparent; /* Para efeito de hover */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease-in; /* Transição suave */
+}
+
+.social-links a:hover { /*Efeito De Sobreposição Da Ancora Links*/
+    background-color: #66CDAA; /* Fundo leve ao passar o mouse */
+    border-color: #333 ; /* Mudança na borda ao passar o mouse */
+}
+
+.info-contacts { /*Informações Dos Contatos*/
+    margin: 10px; /* Adiciona espaço acima e abaixo da seção */
+}
+
+.contact-details { /*Detalhes Dos Contatos*/
+    display: flex; /* Utiliza flexbox para o layout */
+    gap: 20px; /* Espaço entre os itens */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+.contact-details p { /* Paragrafos Dos Detalhes Dos Contatos*/
+    margin: 0; /* Remove margem padrão dos parágrafos */
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+/* Estilos do menu mobile (escondido inicialmente) */
+#menu {
+    display: none; /* Esconda o menu inicialmente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
+    z-index: 1000; /* Coloca o menu acima de outros elementos */
+    color: snow;
+    padding: 20px;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#menu ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+#menu ul li a {
+    color: snow;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+#menu ul li a:hover {
+    background-color:#1b956c ;
+    border-radius:10px ;
+    font-size: 32px ;
+    height: 40px;
+    color: snow;
+}
+
+.closeMenu {
+    display: block; /* Garante que o botão seja exibido */
+    background: transparent; /* Fundo transparente */
+    border: none; /* Sem borda */
+    color: snow; /* Cor do texto */
+    font-size: 30px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor em forma de ponteiro ao passar o mouse */
+    position: absolute; /* Posiciona o botão */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da direita */
+}

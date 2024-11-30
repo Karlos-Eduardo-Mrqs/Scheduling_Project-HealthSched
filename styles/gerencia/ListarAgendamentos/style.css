@@ -1,0 +1,271 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: snow;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 100px;
+    height: 100vh;
+    background-color: #66CDAA;
+    color: #fff;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease, background-color 0.3s ease;
+    overflow: hidden;
+    z-index: 1000;
+    top: 0;
+}
+
+.sidebar:hover {
+    width: 350px;
+    background-color: #66CDAA;
+    border: 1px solid #1b956c;
+}
+
+/* Ajustes no cabeçalho da sidebar */
+.sidebar-header {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar-header .logo {
+    margin-right: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    width: 100%;
+}
+
+.sidebar-menu li a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: background 0.3s ease-in-out;
+}
+
+.sidebar-menu li a:hover {
+    background-color: snow;
+    color: black;
+}
+
+.sidebar-menu li a:hover .menu-icon {
+    filter: brightness(1) invert(0);
+}
+
+.menu-icon, .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+/* Esconde o texto dos links quando a sidebar está fechada */
+.menu-text {
+    display: none;
+    font-weight: bolder;
+    text-align: start;
+    white-space: nowrap;
+}
+
+/* Exibe o texto dos links quando a sidebar está expandida */
+.sidebar:hover .menu-text {
+    display: inline-block;
+    margin-left: 20px;
+    align-self: center;
+}
+
+/* Painel de conteúdo */
+.painel {
+    margin-left: 80px;
+    padding: 40px;
+    transition: margin-left 0.5s ease;
+}
+
+.sidebar:hover ~ .painel {
+    margin-left: 350px;
+}
+
+.painel {
+    margin-left: 80px;
+    padding: 40px;
+    transition: margin-left 0.5s ease;
+}
+
+.sidebar:hover ~ .painel {
+    margin-left: 350px;
+}
+
+/* Painel de Conteúdo */
+.painel {
+    margin-left: 80px;
+    padding: 30px;
+    transition: margin-left 0.3s ease;
+}
+
+/* Pesquisa */
+.pesquisa {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.container-pesquisa {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+select, input[type="date"], button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+select, input[type="date"] {
+    width: 200px;
+}
+
+button {
+    background-color: #66CDAA;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1b956c;
+}
+
+/* Resultado */
+.resultado {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Estilo para o cabeçalho da tabela */
+thead {
+    background:  #48D1CC; /* Gradiente no cabeçalho */
+    color: white;
+}
+
+th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Estilo para as células de dados */
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilo para as linhas alternadas da tabela */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Efeito de hover nas linhas */
+tbody tr {
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+tbody tr:hover {
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efeito de sombra ao passar o mouse */
+}
+
+/* Estilos de mensagem de erro na tabela */
+table .error {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Estilos para a coluna de status com ícones */
+.status-confirmado::before {
+    content: "✔️"; /* Usando um emoji de confirmação */
+    color: green;
+}
+
+.status-pendente::before {
+    content: "🕒"; /* Usando um emoji de relógio para indicar pendência */
+    color: orange;
+}
+
+.status-cancelado::before {
+    content: "❌ "; /* Usando um emoji de X para indicar cancelamento */
+    color: red;
+}
+
+/* Estilos para ícones de status com espaçamento */
+.status-confirmado, .status-pendente, .status-cancelado {
+    font-weight: bolder;
+    font-size: 16px;
+    margin-left: auto;
+}
+
+.appointment-list {
+    margin-top: 20px;
+}
+
+.pop {
+    display: none; 
+    position: relative; 
+    z-index: 10; 
+    background-color: snow;
+    box-shadow: 5px 5px 15px; 
+    padding: 10px; 
+    border-radius: 10px;
+    text-align: center;
+}
+
+#pair {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}

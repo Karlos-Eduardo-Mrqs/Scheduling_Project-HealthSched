@@ -1,0 +1,259 @@
+@media (max-width: 1420px) {
+    .paralelogram {
+        max-width: 800px;
+        max-height: 600px;
+    }
+
+    .container {
+        padding: 20px 3px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 15px;
+        max-width: 80vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-box {
+        display: flex;
+        flex-direction: column; /* Alinhando os elementos verticalmente */
+        align-items: center; /* Centraliza horizontalmente */
+        width: 90%; /* Ajuste a largura da caixa de formulário */
+    }
+
+    .form-box img {
+        max-width: 250px; /* Definindo tamanho máximo da imagem */
+        max-height: 250px; /* Definindo altura máxima da imagem */
+        margin-bottom: 10px; /* Espaço entre a imagem e o formulário */
+    }
+
+    .form-box #cadastro {
+        width: 350px;
+        height: 450px; /* Ajuste para auto */
+        border-radius: 10px;
+        text-align: center;
+        padding: 15px; /* Adiciona padding */
+        margin-top: 10px; /* Espaço entre a imagem e o formulário */
+    }
+
+    #cadastro input {
+        height: 35px;
+        width: 90%;
+        margin-bottom: 10px; /* Espaço entre os inputs */
+    }
+
+    #cadastro label {
+        font-size: 14px;
+        margin-bottom: 5px; /* Espaço abaixo do label */
+        display: block; /* Garante que o label ocupe a linha toda */
+    }
+
+    #cadastro input:focus ~ label,
+    #cadastro input:not(:placeholder-shown) ~ label {
+        top: -10px; /* Quando o input está focado ou preenchido, o label sobe */
+        font-size: 14px;
+        color: #66CDAA;
+    }
+}
+
+@media (max-width: 1110px) {
+    .paralelogram {
+        max-width: 700px; /* Diminui a largura máxima */
+        max-height: 550px; /* Diminui a altura máxima */
+    }
+
+    .container {
+        padding: 15px 3px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 15px;
+        max-width: 80vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-box #cadastro {
+        width: 300px; /* Diminui a largura do cadastro */
+        height: 440px; /* Ajusta a altura com o conteúdo */
+        border-radius: 10px;
+        text-align: center;
+        padding: 15px; /* Ajusta o padding interno */
+    }
+
+    #cadastro input {
+        height: 30px; /* Ajuste da altura do input para uma usabilidade melhor */
+        width: 100%;
+    }
+
+    #cadastro label {
+        font-size: 14px;
+        margin-left: -5px; /* Espaço abaixo do label */
+        display: block; /* Garante que o label ocupe a linha toda */
+    }
+
+    #cadastro input:focus ~ label,
+    #cadastro input:not(:placeholder-shown) ~ label {
+        top: -8px; /* Quando o input está focado ou preenchido, o label sobe */
+        font-size: 12px; /* Diminui o tamanho da fonte do label */
+        color: #66CDAA;
+    }
+
+    #cadastro button, #cadastro a {
+        font-size: 12px; /* Diminui o tamanho da fonte dos botões e links */
+        margin-bottom: 8px; /* Reduz o espaço abaixo dos botões */
+    }
+
+    img {
+        max-width: 220px; /* Reduz a largura máxima das imagens */
+        max-height: 250px; /* Reduz a altura máxima das imagens */
+        margin-bottom: 10px; /* Espaço entre a imagem e o formulário */
+    }
+}
+
+@media (max-width: 790px) {
+    .paralelogram {
+        max-width: 450px; /* Diminuir largura do paralelogramo */
+        max-height: 480px; /* Diminuir altura do paralelogramo */
+        margin: 0 auto; /* Centralizar horizontalmente */
+        transform: none; /* Remover transformação */
+    }
+
+    .form-box {
+        width: 90%; /* Aumentar a largura da caixa de formulário */
+        max-width: 300px; /* Limitar a largura máxima para um layout mais equilibrado */
+        position: relative; /* Permitir posicionamento absoluto dentro */
+        margin: 0 auto; /* Centralizar horizontalmente */
+    }
+
+    .form-box #cadastro {
+        height: auto; /* Definir a altura como automática para se ajustar ao conteúdo */
+        width: 100%; /* Largura total dentro do contêiner */
+    }
+
+    img {
+        border-radius: 50%;
+        position: absolute;
+        top: 10px; /* Você pode ajustar essa posição conforme necessário */
+        left: 45%; /* Centraliza a imagem */
+        transform: translateX(-50%); /* Ajusta a posição para o centro */
+    }
+
+    /* Ajustar estilo dos inputs e títulos */
+    #cadastro input,#cadastro h2 {
+        display: flex; /* Utilizar flexbox para alinhar conteúdo */
+        justify-content: center; 
+        width: 100%; /* A largura deve ser 100% para ocupar todo o espaço disponível */
+    }
+
+    #cadastro label{
+        font-size: 14px; /* Diminui o tamanho da fonte */
+        margin-bottom: 5px; /* Espaço abaixo do label */
+    }
+
+    /* Estilo para os botões e títulos */
+    #cadastro button,#cadastro h2{
+        display: flex;
+        justify-content: center; /* Centraliza os botões e títulos */
+        align-items: center;
+        width: 100%; /* Ajustar a largura dos inputs */
+        margin-top: 10px; /* Espaço acima do botão/título */
+    }
+
+    #cadastro button,#cadastro a{
+        display: flex;
+        justify-content: center; /* Centraliza os botões */
+        width: 100%; /* Ajustar a largura dos botões */
+        font-size: 10px;
+        margin-top: 5px; /* Adicionar um espaço acima dos botões */
+        text-align: center;
+        align-items: center;
+    }
+
+    #cadastro input{
+        display: flex;
+        justify-content: center;
+        width: 100%; /* Ajustar a largura dos inputs */
+        height: 30px; /* Definir uma altura padrão para os inputs */
+    }
+
+    #cadastro button,#cadastro a {
+        font-size: 12px; /* Manter o tamanho da fonte */
+    }
+}
+
+@media (max-width: 475px) {
+    .paralelogram {
+        max-width: 300px; /* Diminuir largura do paralelogramo */
+        max-height: 450px; /* Diminuir altura do paralelogramo */
+        transform: none; /* Remover transformação */
+    }
+
+    .form-box {
+        width: 90%; /* Aumentar a largura da caixa de formulário */
+        max-width: 250px; /* Limitar a largura máxima para um layout mais equilibrado */
+        position: relative; /* Permitir posicionamento absoluto dentro */
+    }
+
+    .form-box #cadastro{
+        height: auto; /* Definir a altura como automática para se ajustar ao conteúdo */
+        width: 100%; /* Largura total dentro do contêiner */
+    }
+
+    .form-box #cadastro{
+        max-height: 350px;
+        max-height: 380px;
+    }
+
+    img {
+        border-radius: 50%;
+        position: absolute;
+        top: 10px; /* Você pode ajustar essa posição conforme necessário */
+        left: 40%; /* Centraliza a imagem */
+        transform: translateX(-45%); /* Ajusta a posição para o centro */
+    }
+
+    /* Ajustar estilo dos inputs e títulos */
+    #cadastro input,#cadastro h2 {
+        display: flex; /* Utilizar flexbox para alinhar conteúdo */
+        justify-content: center; 
+        width: 100%; /* A largura deve ser 100% para ocupar todo o espaço disponível */
+    }
+
+    #cadastro label{
+        font-size: 12px; /* Diminui o tamanho da fonte */
+        margin-bottom: 5px; /* Espaço abaixo do label */
+    }
+
+    /* Estilo para os botões e títulos */
+    #cadastro button,#cadastro h2{
+        display: flex;
+        justify-content: center; /* Centraliza os botões e títulos */
+        align-items: center;
+        width: 100%; /* Ajustar a largura dos inputs */
+        font-size: 12px; /* Tamanho da fonte dos botões/títulos */
+    }
+
+    #cadastro button,#cadastro a{
+        display: flex;
+        justify-content: center; /* Centraliza os botões */
+        width: 100%; /* Ajustar a largura dos botões */
+        font-size: 10px; /* Diminuir tamanho da fonte dos botões */
+        margin-top: 5px; /* Adicionar um espaço acima dos botões */
+        text-align: center;
+        align-items: center;
+    }
+
+    #cadastro input
+    {
+        display: flex;
+        justify-content: center;
+        width: 100%; /* Ajustar a largura dos inputs */
+        height: 15px; /* Definir uma altura padrão menor para os inputs */
+        font-size: 12px; /* Ajustar tamanho da fonte dos inputs */
+    }
+
+    #cadastro button,
+    #cadastro a {
+        font-size: 10px; /* Manter o tamanho da fonte menor */
+    }
+}

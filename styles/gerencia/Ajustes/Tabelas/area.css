@@ -1,0 +1,237 @@
+/* Estilo geral do corpo */
+body {
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    background-color: #f8f9fa; /* Cor de fundo suave */
+    color: #333; /* Cor do texto padrão */
+    margin: 0;
+    padding: 20px; /* Espaçamento interno */
+}
+
+/* Estilo do card do formulário */
+.form-card {
+    background-color: #fff; /* Fundo branco */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    padding: 20px; /* Espaçamento interno */
+    max-width: 800px; /* Largura máxima do card */
+    margin: 0 auto; /* Centraliza o card na tela */
+}
+
+/* Estilo do cabeçalho do card */
+.form-card h3 {
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaçamento abaixo do cabeçalho */
+    font-size: 24px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilo da tabela */
+.tabela {
+    width: 100%; /* Tabela ocupa toda a largura disponível */
+    border-collapse: collapse; /* Remove espaços entre bordas */
+    margin: 20px 0; /* Espaçamento acima e abaixo da tabela */
+}
+
+/* Estilo das células da tabela */
+.tabela th, .tabela td {
+    padding: 10px; /* Espaçamento interno das células */
+    text-align: center; /* Alinhamento do texto ao centro */
+    font-size: 20px; /* Tamanho da fonte das células */
+}
+
+/* Estilo do cabeçalho da tabela */
+.tabela th {
+    background-color: #66CCAA; /* Cor de fundo do cabeçalho em verde */
+    color: #fff; /* Cor do texto do cabeçalho */
+    font-size: 16px; /* Tamanho da fonte do cabeçalho */
+}
+
+/* Efeito de hover nas linhas da tabela */
+.tabela tr:hover {
+    background-color: #e6f5f0; /* Cor de fundo ao passar o mouse, suave */
+}
+
+/* Estilo do link de "Sair" */
+a {
+    background-color: #f44336; /* Cor de fundo vermelho */
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    padding: 10px 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    display: inline-block;
+    margin: 10px 0;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+}
+
+/* Efeito de hover no botão "Sair" */
+a:hover {
+    background-color: #d32f2f; /* Cor de fundo ao passar o mouse */
+    color: #fff; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilo para o input de texto (quando estiver visível) */
+.area-nome-input {
+    width: 100%; /* O input ocupará toda a largura disponível */
+    padding: 10px; /* Espaçamento interno para tornar o campo mais confortável de digitar */
+    font-size: 16px; /* Tamanho de fonte maior para melhor leitura */
+    border: 1px solid #ccc; /* Borda leve para o campo */
+    border-radius: 4px; /* Bordas arredondadas */
+    background-color: #f9f9f9; /* Cor de fundo suave */
+    transition: border-color 0.3s ease; /* Transição suave na borda */
+}
+
+/* Estilo ao focar no input */
+.area-nome-input:focus {
+    border-color: #4CAF50; /* Borda verde ao focar, indicando interatividade */
+    outline: none; /* Remove o contorno padrão */
+    background-color: #fff; /* Muda o fundo para branco ao focar */
+}
+
+/* Estilo para o campo de nome da área exibido (visível quando editado) */
+.area-nome-display {
+    font-size: 16px; /* Tamanho de fonte correspondente ao input */
+    color: #333; /* Cor do texto */
+    padding: 10px; /* Um pouco de espaçamento ao redor do texto */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+
+/* Estilo dos ícones de ação */
+img {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s, opacity 0.3s;
+    border-radius: 50%;
+}
+
+/* Efeito de hover nas imagens */
+img:hover {
+    background-color: #1b956c;
+    transform: scale(1.1); /* Aumenta a imagem em 10% */
+    opacity: 1.0; /* Reduz a opacidade para 80% */
+    filter: brightness(1) invert(0);
+}
+
+/* Estilo do pop-up de mensagem */
+.pop {
+    display: none;
+    position: relative;
+    z-index: 10;
+    background-color: snow;
+    box-shadow: 5px 5px 15px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#pair {
+    color: none;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Estilo do fundo do pop-up de exclusão */
+.popup-del-back {
+    position: fixed; /* Fixar a posição para cobrir a tela toda */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    z-index: 999; /* Coloca atrás do popup */
+    display: flex; /* Usando flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    display: none; /* Começa oculto */
+}
+
+/* Estilo do pop-up de exclusão */
+.popup-del {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 80%; /* Largura do pop-up será 80% da tela */
+    max-width: 600px; /* Largura máxima do pop-up */
+    height: auto; /* Altura do pop-up será automática para ajustar o conteúdo */
+    max-height: 800px; /* Altura máxima do pop-up */
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column; /* Coloca os elementos em coluna */
+    justify-content: center; /* Centraliza os elementos verticalmente */
+    text-align: center; /* Centraliza o texto */
+    overflow-y: auto; /* Permite rolagem vertical caso o conteúdo seja grande */
+    position: relative; /* Isso vai garantir que o pop-up se comporte como esperado dentro do fundo */
+}
+
+/* Estilo da mensagem de confirmação */
+#message-del {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 20px; /* Espaço entre a mensagem e os botões */
+}
+
+/* Estilo dos botões de confirmação */
+.popup-del button {
+    width: 80%;
+    height: 35px;
+    margin: 5px auto; /* Centraliza os botões e dá espaçamento */
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    cursor: pointer;
+    border: none; /* Remove a borda padrão */
+}
+
+
+/* Estilo do botão "Cancelar" */
+#no {
+    background-color: #f44336; /* Cor para o botão de cancelamento */
+}
+
+/* Estilo do botão "Sim" */
+#yes {
+    background-color: #66CCAA; /* Cor para o botão de confirmação */
+}
+
+#yes:hover,#no:hover{
+    background-color: #333;
+}
+
+/* Estilo geral dos botões */
+button {
+    background-color: #66CCAA; /* Cor de fundo dos botões em verde */
+    color: #fff; /* Cor do texto */
+    border: none; /* Remove borda padrão */
+    border-radius: 4px; /* Bordas arredondadas */
+    padding: 10px 15px; /* Espaçamento interno dos botões */
+    cursor: pointer; /* Indica que é clicável */
+    transition: background-color 0.3s; /* Transição suave para o hover */
+}
+
+/* Efeito de hover nos botões */
+button:hover {
+    background-color: #136b4e; /* Cor do fundo ao passar o mouse (azul) */
+}
+
+/* Estilo do campo de entrada da área */
+.nome-plano {
+    display: flex; /* Flexbox para alinhar itens */
+    align-items: center; /* Alinhamento vertical */
+}
+
+/* Estilo do campo de input */
+.plano-nome-input {
+    margin-left: 10px; /* Espaçamento à esquerda */
+    border: 1px solid #ddd; /* Borda leve */
+    padding: 5px; /* Espaçamento interno */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+
+/* Estilo para a mensagem de deleção */
+#message-del {
+    margin-bottom: 15px; /* Espaçamento abaixo da mensagem */
+}

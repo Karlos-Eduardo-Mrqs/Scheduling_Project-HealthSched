@@ -1,0 +1,234 @@
+/* Media Queries para responsividade */
+@media screen and (max-width: 1262px) {
+    #menu{
+        display: none;
+    }        
+
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card-content img {
+        width: 100%;
+        max-width: 150px; /* Controla o tamanho da imagem para não ficar muito grande */
+    }
+
+    .card-content h3, .card-content p {
+        margin: 10px 0;
+    }
+}
+
+
+@media screen and (max-width: 1190px) {
+    .item-entrar a, .item a {
+        padding: 8px 12px;
+        font-size: 10px;
+    }
+
+    .item-entrar {
+        margin-left: auto;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .item,.item-entrar {
+        margin-left: auto;
+        padding-right: 15px;
+        font-size: 10px;
+    }
+    
+    .item-entrar a {
+        padding: 6px 10px;
+    }
+}
+
+/* Menu responsivo para telas menores */
+@media (max-width: 1024px) {
+    #menu {
+        display: none; /* O menu estará oculto por padrão */
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh; /* O menu ocupa toda a altura da tela */
+        background-color: #333; /* Cor de fundo do menu */
+        flex-direction: column; /* Alinha os itens verticalmente */
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 20px; /* Espaçamento no topo do menu */
+        transition: all 0.3s ease-in-out; /* Transição suave */
+    }
+
+    .item-logo {
+        display: block; /* Exibe a logo dentro do menu */
+        max-width: 150px;
+        margin-bottom: 20px; /* Espaçamento abaixo da logo */
+    }
+
+    .menu-icon {
+        display: flex; /* Torna o ícone do menu visível */
+        cursor: pointer;
+        font-size: 30px;
+        justify-content: center;
+        max-width: 150px;
+        margin-bottom: 20px;
+    }
+
+    .closeMenu {
+        display: block; /* Exibe o botão X de fechar */
+        cursor: pointer;
+        font-size: 30px;
+        color: snow;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+
+    /* Itens do menu dentro do menu expansível */
+    .menu-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Espaçamento entre os itens do menu */
+        margin-top: 50px;
+    }
+
+    /* Esconde os itens padrão da navbar */
+    .item, .item-entrar {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(100% - 20px); /* Faz os cartões ocuparem toda a largura */
+    }
+
+    .card img{
+        max-width: 300px;
+        max-height: 300px;
+        background-position:top ;
+    }
+    
+    .menu-icon {
+        display: flex; /* Torna o ícone do menu visível */
+        cursor: pointer;
+        font-size: 30px;
+        justify-content: center;
+        max-width: 100px;
+        margin-bottom: 15px;
+    }
+
+    .nav-bar .item, .item-entrar {
+        display: none;
+    }
+
+    #menu {
+        display: block; /* O menu estará oculto por padrão */
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh; /* O menu ocupa toda a altura da tela */
+        background-color: #333; /* Cor de fundo do menu */
+        flex-direction: column; /* Alinha os itens verticalmente */
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 20px; /* Espaçamento no topo do menu */
+        transition: all 0.3s ease-in-out; /* Transição suave */
+    }
+    
+    .item-logo {
+        display: block; /* Exibe a logo dentro do menu */
+        max-width: 100px;
+        margin-bottom: 15px; /* Espaçamento abaixo da logo */
+    }
+
+    .info-section a ,.info-section h2, .footer footer{
+        font-size: 15px ;
+    }
+    
+    .carousel-caption {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 690px) {
+    .info-section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+
+    .info-section a, .info-section h2, .footer footer {
+        font-size: 10px;
+    }
+    
+}
+
+@media (max-width: 640px) {
+    .item-logo {
+        display: block; /* Exibe a logo dentro do menu */
+        max-width: 100px;
+        margin-left: 10px; /* Espaçamento abaixo da logo */
+    }
+
+    .nav-bar .item, .item-entrar {
+        display: none;
+    }
+
+    .carousel-caption {
+        font-size: 0.5rem;
+        padding: 6px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 35px;
+        height: 35px;
+    }
+
+}
+
+@media (max-width:504px){
+    .info-section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+
+    .info-section a, .info-section h2, .footer footer {
+        font-size: smaller;
+    }
+}
+
+@media (max-width: 436px){
+    .faq-item h3{
+        font-size: 12px ;
+        text-align: center;
+    }
+
+    .faq-item p {
+        font-size: 12px;
+        text-align: justify;
+    }
+
+    .faq h2{
+        font-size: 16px;
+
+    }
+   
+}

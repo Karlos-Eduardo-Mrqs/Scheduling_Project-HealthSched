@@ -1,0 +1,212 @@
+/* Estilo Geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Contêiner Principal do Formulário */
+.form-container, .form-card {
+    background-color: #ffffff;
+    max-width: 450px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Links */
+a {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #44CCAA;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #3aab91;
+}
+
+/* Títulos */
+h3 {
+    color: #333;
+    text-align: center;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Labels */
+label {
+    font-size: 1em;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Campos de Seleção e Inputs */
+select, input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+select:focus, input[type="text"]:focus {
+    border-color: #44CCAA;
+    outline: none;
+}
+
+/* Botão */
+button {
+    padding: 12px 15px;
+    background-color: #44CCAA;
+    color: #ffffff;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #3aab91;
+}
+
+/* Pop-up de Mensagem */
+.pop {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Fundo Escurecido do Pop-up */
+.popup-del-back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Pop-up de Confirmação */
+.popup-del {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 300px;
+}
+
+.popup-del button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #44CCAA;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-del button:hover {
+    background-color: #3aab91;
+}
+
+#message-del {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Input com Label Flutuante */
+.group {
+    position: relative;
+}
+
+.group input[type="text"],
+.group select {
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+.group input:focus,
+.group select:focus {
+    border-color: #44CCAA;
+}
+
+.group label {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 1em;
+    color: #aaa;
+    transition: all 0.2s ease;
+    pointer-events: none;
+    font-weight: bold;
+}
+
+.group input:focus + label,
+.group input:not(:placeholder-shown) + label,
+.group select:focus + label,
+.group select:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 8px;
+    font-size: 0.8em;
+    color: #44CCAA;
+}
+
+/* Botão de Fechar Pop-up */
+button.btn-close {
+    background: transparent;
+    color: #333;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-weight: bold;
+}
+
+button.btn-close:hover {
+    color: #44CCAA;
+}
+
+#especialidade-form{
+    display: none;
+}

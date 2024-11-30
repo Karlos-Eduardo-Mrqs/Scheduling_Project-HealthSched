@@ -1,0 +1,364 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+/* Estilo do botão Sair */
+#botaoSair {
+    text-decoration: none;
+    color: #fff;
+    background-color: red;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: ease-in 0.3s;
+}
+
+#botaoSair:hover {
+    background-color: #333;
+}
+
+/* Pop-up para mensagens */
+.pop {
+    display: none;
+    z-index: 10;
+    background-color: #fff;
+    color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.pop p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+/* Calendário */
+.calendar {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.calendar .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #44CCAA;
+    color: white;
+    padding: 15px;
+}
+
+.calendar .header h2 {
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.calendar .header button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.calendar .header button:hover {
+    color: black;
+}
+
+/* Dias da semana */
+.days-of-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.days-of-week div {
+    padding: 10px;
+    color: #555;
+}
+
+/* Grid de dias do mês */
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    padding: 20px;
+}
+
+.day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.day:hover {
+    background-color: #e2e2e2;
+}
+
+.day.today {
+    background-color: #44CCAA;
+    color: white;
+}
+
+.day.selected-day {
+    background-color: #ff9800;
+    color: white;
+}
+
+.day.empty {
+    background-color: transparent;
+    pointer-events: none;
+}
+/* Seção de horários */
+.horarios-container {
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Seções de horários disponíveis e reservados */
+#horariosDisponiveis, #horariosReservados {
+    width: 45%;
+    padding: 20px;
+    border-radius: 10px;
+    transition: linear 0.5s;
+}
+
+/* Estilo para a seção de horários disponíveis */
+#horariosDisponiveis {
+    background-color: #e4ffe4;
+    box-shadow: 0 4px 8px 5px #333;
+}
+
+#horariosReservados {
+    background-color: #ffe5e5;
+    box-shadow: 0 4px 8px 5px #333;
+}
+
+/* Efeito de hover e foco nas seções */
+#horariosDisponiveis:hover,#horariosDisponiveis:focus {
+    color: snow;
+    background-color: #00ffbf;
+    box-shadow: 0 4px 8px 5px #12cf9f;
+}
+
+#horariosReservados:hover ,#horariosReservados:focus {
+    color: snow;
+    background-color: rgb(255, 59, 59);
+    box-shadow: 0 4px 8px 5px #fd2e2e;
+}
+
+#horariosDisponiveis:focus {
+    background-color: #00ffbf;
+}
+
+#horariosReservados:focus {
+    background-color: rgb(255, 59, 59);
+}
+
+/* Títulos das seções de horários */
+#horariosDisponiveis h3, #horariosReservados h3 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#horariosDisponiveis:hover h3, #horariosReservados:hover h3 {
+    color: black; /* Define a cor do título */
+}
+
+/* Estilo para os horários listados dentro das seções */
+#horariosDisponiveis ul, #horariosReservados ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo para cada item de horário */
+#horariosDisponiveis li, #horariosReservados li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* Cursor de ponteiro para horários disponíveis */
+}
+
+/* Efeito de hover para os itens de horário */
+#horariosDisponiveis li:hover {
+    background-color: #e6f7ff;
+}
+
+/* Estilos para horários reservados - cursor proibido */
+#horariosReservados li {
+    cursor: not-allowed; /* Cursor proibido para horários reservados */
+    background-color: #ffe0e0;
+    color: #999;
+    opacity: 0.8;
+}
+
+/* Efeito de hover para os itens de horário disponíveis e reservados */
+#horariosDisponiveis li:hover, #horariosReservados li:hover {
+    background-color: #e6f7ff;
+}
+
+/* Estilo e interação para checkboxes em horários */
+#horariosDisponiveis li input[type="checkbox"], #horariosReservados li input[type="checkbox"] {
+    cursor: pointer; /* Cursor ponteiro para checkbox em horários disponíveis */
+    transform: scale(1.2); /* Aumenta levemente o checkbox */
+}
+
+#horariosReservados li input[type="checkbox"] {
+    cursor: not-allowed; /* Cursor proibido para horários reservados */
+    opacity: 0.6; /* Tornar o checkbox visualmente desativado */
+}
+
+/* Wrapper para os checkboxes */
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+/* Esconde o checkbox original */
+.checkbox-wrapper input[type="checkbox"] {
+    display: none;
+}
+
+/* Estilo do label e criação do novo checkbox customizado */
+.checkbox-wrapper label {
+    position: relative;
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+    padding-left: 30px;
+}
+
+/* Estilo visual do checkbox customizado */
+.checkbox-wrapper label::before {
+    content: ''; /* Cria o conteúdo do checkbox */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Estilo para o checkbox quando estiver marcado */
+.checkbox-wrapper input[type="checkbox"]:checked + label::before {
+    background-color: #44CCAA;
+    border-color: black;
+}
+
+/* Efeito de hover para o checkbox */
+.checkbox-wrapper label:hover::before {
+    background-color: #e0e0e0;
+}
+
+/* Adiciona o "check" visual no label quando o checkbox está marcado */
+.checkbox-wrapper input[type="checkbox"]:checked + label::after {
+    content: '✔';
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: white;
+}
+
+/* Estilo para horários reservados */
+.horarios-section.reservados .checkbox-wrapper label {
+    color: #999; /* Cor mais clara para horários reservados */
+    cursor: not-allowed;
+}
+
+.horarios-section.reservados .checkbox-wrapper label::before {
+    border-color: #fff;
+    background-color: #f2f2f2;
+}
+
+.horarios-section.reservados .checkbox-wrapper label:hover::before {
+    background-color: #f2f2f2; /* Sem efeito de hover nos horários reservados */
+}
+
+/* Estilo para horários disponíveis */
+.horarios-section.pre-definidos .checkbox-wrapper label {
+    color: #333;
+    cursor: pointer;
+}
+
+/* Adicão E Envio Dos Horários !*/
+.horariosPersonalizados {
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* Centraliza o conteúdo horizontalmente */
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;  /* Organiza os elementos em coluna */
+}
+
+#enviarHorarios {
+    padding: 30px 60px;  /* Aumenta o tamanho do botão */
+    font-size: 18px;  /* Aumenta o tamanho da fonte */
+    background-color: transparent;
+    color: black;
+    width: 100%;  /* Ocupa toda a largura disponível */
+    max-width: 400px;  /* Define um limite máximo de largura para o botão */
+    border: 1px solid black;
+    border-radius: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition:  ease-in 0.5s ;
+    text-align: center;  /* Centraliza o texto dentro do botão */
+}
+
+#enviarHorarios:hover {
+    color: snow;
+    background-color: #33aa88;
+}

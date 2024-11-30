@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f6f8; /* Fundo suave */
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    color: #333;
+}
+
+.nav-bar {
+    display: flex;
+    width: 100%;
+    background-color: #66CDAA;
+    height: 70px;
+    align-items: center;
+}
+
+.list-item {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.item a {
+    font-size: 18px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    width: fit-content;
+    padding: 15px;
+    cursor: pointer;
+    transition: ease-in-out 0.4s;
+}
+
+.item a:hover, .item.active a {
+    background-color: #ffffff;
+    color: #464646;
+    font-weight: bold;
+}
+
+.item-logo img {
+    width: 120px;
+    border-radius: 8px;
+    height: auto;
+}
+
+.main-content {
+    flex-grow: 1;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.main-content h2 {
+    font-size: 26px;
+    margin-bottom: 15px; /* Espaço abaixo do título */
+    color: #333;
+    padding-top: 10px;
+    padding-bottom: 5px; /* Espaço entre o título e o link */
+    text-align: left;
+}
+
+.main-content .link-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px; /* Espaço entre o link e o próximo conteúdo */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.main-content .link-container a {
+    text-decoration: none;
+    background-color: #44CCAA;
+    padding: 0 12px; /* Define apenas o padding horizontal */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 2.5; /* Define a altura do link */
+    display: inline-block;
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+.main-content .link-container a:hover {
+    background-color: #3aab91;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+.sidebar {
+    width: 280px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    max-width: 320px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Apenas uma sombra mais leve */
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.12); /* Segunda camada de sombra */
+}
+
+.card h2 {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+.card .email {
+    font-size: 14px;
+    color: #666;
+    margin: 8px 0 20px;
+    font-style: italic;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    background: linear-gradient(145deg, #66CDAA, #57af91);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.7);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    background: linear-gradient(145deg, #57af91, #45a079);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2), -2px -2px 8px rgba(255, 255, 255, 0.6);
+}
+
+.btn.logout {
+    background: linear-gradient(145deg, #f44336, #d32f2f);
+}
+
+.btn.logout:hover {
+    background: linear-gradient(145deg, #d32f2f, #b71c1c);
+}
+
+.main-content {
+    flex-grow: 1;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.agendamentos {
+    border-radius: 8px;
+    background-color: #f9fafb;
+    padding: 15px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.agendamento-item {
+    border-bottom: 1px solid #dee2e6;
+    padding: 10px 0;
+}
+
+.agendamento-item:last-child {
+    border-bottom: none;
+}
+
+.pop {
+    display: none;
+    position: relative;
+    z-index: 10;
+    background-color: snow;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+#pair {
+    color: #333;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Estilos gerais da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Estilo para o cabeçalho da tabela */
+thead {
+    background:  #48D1CC; /* Gradiente no cabeçalho */
+    color: white;
+}
+
+th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Estilo para as células de dados */
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilo para as linhas alternadas da tabela */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Efeito de hover nas linhas */
+tbody tr {
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+
+tbody tr:hover {
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efeito de sombra ao passar o mouse */
+}
+
+/* Estilos de mensagem de erro na tabela */
+table .error {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Estilos para a coluna de status com ícones */
+.status-confirmado::before {
+    content: "✔️"; /* Usando um emoji de confirmação */
+}
+
+.status-pendente::before {
+    content: "🕒"; /* Usando um emoji de relógio para indicar pendência */
+
+}
+
+.status-cancelado::before {
+    content: "❌ "; /* Usando um emoji de X para indicar cancelamento */
+}
+
+/* Estilos para ícones de status com espaçamento */
+.status-confirmado, .status-pendente, .status-cancelado {
+    font-weight: bold;
+    padding-left: 5px;
+}

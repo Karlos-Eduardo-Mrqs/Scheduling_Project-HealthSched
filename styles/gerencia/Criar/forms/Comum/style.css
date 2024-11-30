@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.inputs-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    background: none;
+}
+
+input:focus, select:focus {
+    border-color: #1b956c;
+    box-shadow: 0 0 5px rgba(27, 149, 108, 0.5);
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label,
+select:focus + label,
+select:not([value=""]) + label {
+    transform: translateY(-25px);
+    font-size: 14px;
+    color: #66CDAA;
+}
+
+label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 18px;
+    color: #464646;
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #66CDAA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #1b956c;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.links-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#desconectar {
+    text-decoration: none;
+    color: #FF4C4C;
+    transition: color 0.3s ease-in-out;
+}
+
+#desconectar:hover {
+    color: #D40000; 
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: white;
+    padding: 10px 30px 10px 10px; /* ajuste de padding */
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    position: relative; /* manter o contexto */
+}
+
+select::after {
+    content: '\25BC'; /* Unicode para a seta para baixo */
+    position: absolute;
+    right: 15px; /* ajuste do posicionamento */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* evitar a interferência do clique */
+}
+
+option[disabled] {
+    display: none; /* Ocultar a opção "Selecione sua área de saúde" */
+}
+
+input[type="password"] {
+    font-family: 'Arial', sans-serif;
+}
+
+.pop {
+    display: none; 
+    position: relative; 
+    z-index: 10; 
+    background-color:snow;
+    box-shadow: 5px 5px 15px; 
+    padding: 10px; 
+    border-radius: 5px; 
+}
+
+#pair {
+    color: none;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}

@@ -1,0 +1,203 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: snow;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #66CCAA;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #fff; /* Gradiente suave */
+    height: 80px;
+    border-radius: 20px;
+    padding: 0 20px; /* Adicionando espaçamento interno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombras para dar profundidade */
+}
+
+header h1 {
+    color: black;
+    font-size: 24px; /* Ajustando o tamanho da fonte */
+    font-weight: 600; /* Aumentando o peso da fonte */
+    text-align: center;
+    flex-grow: 1; /* Fazendo com que o título ocupe o espaço disponível */
+    margin: 0;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+#logout {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Melhorando o padding */
+    margin-left: 20px;
+    cursor: pointer;
+    border-radius: 25px; /* Bordas mais arredondadas */
+    text-decoration: none;
+    font-weight: 600; /* Peso da fonte aumentado para o botão */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+}
+
+#logout:hover {
+    background-color: #da190b;
+    transform: scale(1.05); /* Efeito de "crescimento" no hover */
+}
+
+/* Estilo do conteúdo do formulário */
+.background {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.form-box {
+    display: flex;
+    justify-content: center;
+}
+
+.form-content {
+    width: 100%;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.inputs-box {
+    margin-bottom: 20px;
+}
+
+.group-1, .group-2, .group-3 {
+    margin-bottom: 15px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #333;
+    outline: none;
+}
+
+label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #333;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+input:focus + label, input:not(:placeholder-shown) + label {
+    top: -10px;
+    font-size: 16px;
+    color: #88CCAA;
+    font-weight: bolder;
+}
+
+/* Estilo dos botões */
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid #363636;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+    margin-top: 10px; /* Margem superior para todos os botões */
+}
+
+button:hover {
+    background-color: #66CCAA;
+    color: snow;
+}
+
+#sair {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+#sair:hover {
+    background-color: #da190b;
+}
+
+/* Feedback de erros ou sucesso */
+.feedback {
+    margin-top: 15px;
+    padding: 10px;
+    color: #fff;
+    background-color: #4CAF50;
+    border-radius: 4px;
+    display: none;
+}
+
+.feedback.error {
+    background-color: #f44336;
+}
+
+.pop {
+    display: none; 
+    position: relative; 
+    z-index: 10; 
+    background-color: snow;
+    box-shadow: 5px 5px 15px; 
+    padding: 10px; 
+    border-radius: 10px;
+    text-align: center;
+}
+
+#pair {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}

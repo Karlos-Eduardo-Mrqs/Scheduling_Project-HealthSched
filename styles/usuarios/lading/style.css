@@ -1,0 +1,548 @@
+    * { /* Todos os Itens */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body { /* Corpo Da Página */
+        display: flex;
+        flex-direction: column;
+        background-color: snow;
+        font-family: Arial, sans-serif;
+        min-height: 100vh;
+    }
+
+    .nav-bar { /* Barra De Navegação */
+        display: flex;
+        width: 100%;
+        background-color: #66CDAA;
+        height: 70px;
+        align-items: center;
+    }
+
+    .list-item { /*Lista de Itens*/
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    .nav-bar .list-item { /*Lista de Itens E Nav-Bar*/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .item-entrar a { /*Item e Item Entrar(as ancoras)*/
+        font-size: 18px;
+        border-radius: 15px;
+        text-decoration: none;
+        color: black;
+        text-transform: uppercase;
+        width: fit-content;
+        padding: 15px;
+        cursor: pointer;
+    }
+
+    .item-entrar { /*Item Entrar*/
+        margin-left: auto;
+    }
+
+    .item-entrar a:hover{ /*Item e Item Entrar(as ancoras) hover*/
+        background-color: #fff;
+        color: #464646;
+        transition: 0.3s ease-in;
+        width: fit-content;
+    }
+
+    .item-logo img { /*Item(É A Logo)*/
+        max-width: 100%;
+        margin: 10px;
+        border-radius: 10px;
+        height: 50px;
+    }
+
+    /* Para os botões dentro dos formulários */
+    
+    /* Estilo para os botões dentro do formulário (igual ao botão de "Entrar") */
+    .nav-bar button {
+        border-radius: 15px;
+        text-decoration: none;
+        color: black;
+        text-transform: uppercase;
+        width: fit-content;
+        padding: 15px;
+        border: none;
+        background-color: transparent;
+        font-size: 18px ;
+        cursor: pointer;
+    }
+
+    /* Estilo para o botão no hover */
+    .nav-bar form button:hover {
+        background-color: #fff;
+        color: #464646;
+        transition: 0.3s ease-in;
+    }
+
+    .imagem-painel {
+        margin-left: auto;
+    }
+    
+    .imagem-painel img{
+        width: 40px; /* Ajuste o tamanho da imagem */
+        height: auto;
+        border-radius: 50%; /* Torna a imagem circular */
+        border: 2px solid #fff; /* Adiciona uma borda para destacar */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .imagem-painel:hover {
+        transform: scale(1.0); /* Aumenta ligeiramente o tamanho ao passar o mouse */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Adiciona sombra ao passar o mouse */
+    }
+    
+    .main-content { /* Conteúdo Principal */
+        margin: 20px;
+        flex-grow: 1; /* Permite que o conteúdo principal cresça para ocupar o espaço disponível */
+    }
+
+    .main-content h1 {
+        margin: 10px;
+        text-align: center;
+    }
+
+    .main-content header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .highlights {
+        margin: 40px 0;
+    }
+
+    .highlights h2 {
+        text-align: center;
+        margin: 10px;
+    }
+
+    .cards { /* Cards */
+        display: flex;
+        justify-content: center; /* Centraliza os cartões horizontalmente */
+        gap: 20px; /* Espaçamento entre os cartões */
+        flex-wrap: wrap;
+        max-width: 1250px; /* Define a largura máxima */
+        margin: 0 auto; /* Centraliza os cartões no contêiner */
+    }
+
+    .card {
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        width: calc(30% - 20px);
+        text-align: center;
+        cursor: pointer;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-content {
+        display: flex;
+        align-items: center;
+    }
+
+    .card-content p {
+        text-align: center;
+        line-height: 1; 
+        padding: 10px;
+        word-spacing: 5px;
+    }
+
+    .card img {
+        width: 120px; /* Define a largura do card */
+        height: 120px; /* Define a altura do card */
+        object-fit: cover; /* Corta a imagem para preencher o espaço */
+        border-radius: 10px;
+    }
+
+    .card h3 {
+        margin: 0 0 10px 0;
+    }
+    
+    .card .see-more {
+        display: inline-block;
+        margin-top: 10px;
+        cursor: pointer;
+        color: #66CDAA;
+        transition: color 0.3s; /* Adiciona uma transição suave */
+    }
+    
+    .card .see-more:hover {
+        text-decoration: underline;
+        color: #5CB6A1; /* Alterar a cor ao passar o mouse */
+    }
+    
+    .popup {
+        display: none; /* Ocultar por padrão */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8); /* Cor de fundo mais escura */
+        justify-content: center;
+        align-items: center;
+        z-index: 1000; /* Certifique-se de que o pop-up esteja acima de outros elementos */
+        backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
+    }
+    
+    .popup-content {
+        background: #fff;
+        padding: 20px; /* Aumentar o padding para mais espaço */
+        border-radius: 12px; /* Bordas arredondadas mais suaves */
+        max-width: 500px; /* Aumentar a largura máxima */
+        width: 100%; /* Largura responsiva */
+        height: auto; /* Altura automática para acomodar o conteúdo */
+        text-align: justify;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+        overflow-y: auto; /* Permitir rolagem se o conteúdo for muito longo */
+    }
+
+    #popup-title{
+        text-align: center;
+    }
+    
+    #popup-image {
+        max-width: 100%; /* Imagem responsiva */
+        height: auto; /* Mantém a proporção da imagem */
+        border-radius: 8px; /* Bordas arredondadas para a imagem */
+        margin-bottom: 15px; /* Espaço abaixo da imagem */
+    }
+    
+    #popup-services {
+        list-style: none; /* Remove marcadores da lista */
+        padding: 0; /* Remove padding padrão */
+        margin: 10px 0; /* Margem em torno da lista */
+    }
+    
+    .close-btn {
+        position: absolute;
+        top: 15px; /* Ajustar posição do botão de fechar */
+        right: 20px; /* Ajustar posição do botão de fechar */
+        font-size: 28px; /* Aumentar o tamanho da fonte do botão de fechar */
+        cursor: pointer;
+        color: #FF5733; /* Cor do botão de fechar */
+        transition: color 0.3s; /* Transição suave */
+    }
+    
+    .close-btn:hover {
+        background-color: #ddd;
+        border-radius:10px ;
+        color: red; /* Cor ao passar o mouse */
+    }
+
+    .footer-back{
+        padding: 10px 0;
+        position: relative;
+        width: 100%;
+        background-color: #66CDAA;
+    }
+
+    .footer { /* Rodapé */
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center; /* Centraliza o conteúdo horizontalmente */     
+        width: 100%; /* Ocupa toda a largura */
+        padding: 20px;
+        color: snow;
+        position: relative;
+        bottom: 0;
+    }
+
+    .footer footer {
+        color: snow; /* Cor do texto do rodapé */
+        text-align: center; /* Centraliza o texto do rodapé */
+        font-size: 18px;
+    }
+
+    .info-section {
+        display: flex; 
+        justify-content: space-around; 
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .about, .contact {
+        text-align: center; 
+        width: 45%;
+    }
+
+    .about a, .contact a {
+        text-decoration: none;
+        color: snow;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    .about a:hover, .contact a:hover {
+        background-color: #fff;
+        color: #464646;
+        transition: 0.3s ease-in;
+    }
+
+    .faq {
+        background-color: #f9f9f9; /* Cor de fundo suave */
+        padding: 20px; /* Espaçamento interno */
+        border-radius: 10px; /* Bordas arredondadas */
+        margin: 20px 0; /* Espaço acima e abaixo da seção */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve para dar profundidade */
+    }
+
+    .faq h2 {
+        text-align: center; /* Centraliza o título */
+        color: #66CDAA; /* Cor do título */
+        margin-bottom: 20px; /* Espaço abaixo do título */
+    }
+
+    .faq-item {
+        margin-bottom: 15px; /* Espaço entre cada item */
+        padding: 15px; /* Espaçamento interno para cada item */
+        background-color: #fff; /* Cor de fundo dos itens */
+        border: 1px solid #ddd; /* Borda leve para os itens */
+        border-radius: 5px; /* Bordas arredondadas para os itens */
+        transition: background-color 0.3s ease; /* Animação ao passar o mouse */
+        cursor: pointer;
+    }
+
+    .faq-item h3 {
+        color: #333; /* Cor do texto das perguntas */
+    }
+
+    .faq-item:hover {
+        background-color: #f1f1f1;
+    }
+    
+    .faq-item p {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+        margin: 0;
+    }
+    
+    .faq-item:hover p {
+        max-height: 100px; 
+        opacity: 1;
+        transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
+    }
+    
+    .pop {
+        display: block; 
+        position: relative; 
+        z-index: 10; 
+        background-color:snow;
+        box-shadow: 5px 5px 15px; 
+        padding: 10px; 
+        border-radius: 5px; 
+    }
+    
+    #pair {
+        color: none;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .menu-icon {
+        display: none;
+        font-size: 30px;
+        cursor: pointer;
+        color: black;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+    
+    /* Estilos do menu mobile (escondido inicialmente) */
+    #menu {
+        display: none; /* Esconda o menu inicialmente */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
+        z-index: 1000; /* Coloca o menu acima de outros elementos */
+        color: snow;
+        padding: 20px;
+    }
+    
+    #menu ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    #menu ul li {
+        padding: 15px;
+        text-align: center;
+    }
+    
+    #menu ul li a {
+        color: snow;
+        font-size: 20px;
+        text-decoration: none;
+        display: block;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    #menu ul li a:hover {
+        background-color:#1b956c ;
+        border-radius:10px ;
+        font-size: 32px ;
+        height: 40px;
+        color: snow;
+    }
+    
+    .closeMenu {
+        display: block; /* Garante que o botão seja exibido */
+        background: transparent; /* Fundo transparente */
+        border: none; /* Sem borda */
+        color: snow; /* Cor do texto */
+        font-size: 30px; /* Tamanho da fonte */
+        cursor: pointer; /* Cursor em forma de ponteiro ao passar o mouse */
+        position: absolute; /* Posiciona o botão */
+        top: 20px; /* Distância do topo */
+        right: 20px; /* Distância da direita */
+    }
+    
+    .imagem-painel {
+        display: inline-block; /* para garantir que o padding funcione corretamente */
+        cursor: pointer; /* para indicar que é clicável */
+        border-radius: 10px; /* para um efeito de círculo */
+        transition: transform 0.2s ease; /* animação suave */
+        overflow: hidden; /* para garantir que a imagem não ultrapasse os limites do círculo */
+        height: 40px;
+        width: 40px;
+    }
+    
+    .imagem-painel a {
+        width: 15px; /* ajuste o tamanho conforme necessário */
+        height: 15px; /* ajuste o tamanho conforme necessário */
+    }
+    
+    img {
+        width: 100%;
+        display: block;
+    }
+    
+    .prev {
+        left: 10px;
+    }
+    
+    .next {
+        right: 10px;
+    }
+    
+    .carousel {
+        position: relative;
+        width: 100%;
+        max-width: 100%; /* O carrossel ocupará 100% da largura disponível */
+        padding: 10px; /* Centraliza o carrossel */
+    }
+    .carousel-inner {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .carousel-item {
+        display: none;
+        width: 100%;
+        height: auto;
+        transition: transform 0.6s ease-in-out;
+    }
+
+    .carousel-item.active {
+        display: block;
+    }
+
+    .carousel-item img {
+        width: 100%; /* A imagem agora ocupará 100% da largura do carrossel */
+        height: auto;
+    }
+
+    .carousel-caption {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        z-index: 10;
+        color: #fff;
+        text-align: left;
+        background-color: rgba(0, 0, 0, 0.5); /* Fundo transparente */
+        padding: 10px 15px;
+        border-radius: 10px;
+    }
+
+    /* Estilo dos ícones de navegação */
+    .carousel-control-prev,
+    .carousel-control-next {
+        position: absolute;
+        border: none;
+        top: 50%;
+        width: 45px;
+        height: 45px;
+        background-color: rgba(0, 0, 0, 0); /* Fundo transparente */
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 11;
+    }
+
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover{
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .carousel-control-prev {
+        left: 20px;
+    }
+
+    .carousel-control-next {
+        right: 20px;
+    }
+
+    .carousel-indicators {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+    }
+
+    .carousel-indicators button {
+        background-color: #333;
+        border: none;
+        width: 12px;
+        height: 12px;
+        margin: 0 5px;
+        border-radius: 50%;
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
+    }
+
+    .carousel-indicators button.active {
+        background-color: #fff;
+        opacity: 1;
+    }

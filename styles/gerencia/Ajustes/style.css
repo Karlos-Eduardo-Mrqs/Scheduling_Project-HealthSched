@@ -1,0 +1,493 @@
+html,body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: snow;
+}
+
+/* Sidebar *//* Sidebar */
+.sidebar {
+    width: 100px;
+    height: 100vh;
+    background-color: #66CDAA;
+    color: #fff;
+    position: fixed; /* Altera para sticky */
+    top: 0; /* Fixa no topo quando rolar */
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease, background-color 0.3s ease;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.sidebar:hover {
+    width: 350px;
+    background-color: #66CDAA;
+    border: 1px solid #1b956c;
+}
+
+/* Ajustes no cabeçalho da sidebar */
+.sidebar-header {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar-header .logo {
+    margin-right: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    width: 100%;
+}
+
+.sidebar-menu li a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: background 0.3s ease-in-out;
+}
+
+.sidebar-menu li a:hover {
+    background-color: snow;
+    color: black;
+}
+
+.sidebar-menu li a:hover .menu-icon {
+    filter: brightness(1) invert(0);
+}
+
+.menu-icon, .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+/* Esconde o texto dos links quando a sidebar está fechada */
+.menu-text {
+    display: none; /* Texto oculto inicialmente */
+    font-weight: bolder;
+    text-align: start;
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+}
+
+/* Exibe o texto dos links quando a sidebar está expandida */
+.sidebar:hover .menu-text {
+    display: inline-block; /* Exibe o texto ao expandir a sidebar */
+    margin-left: 20px; /* Espaço entre o ícone e o texto */
+    align-self: center  ; /* Alinha o texto à esquerda */
+}
+
+.menu-container {
+    margin: 30px auto;
+    max-width: 800px;
+    width: 80%;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.menu.card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+.menu.card h2 {
+    color: #66CDAA;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.menu.card h2.active {
+    color: #333; /* Cor alterada quando o título está ativo */
+}
+
+/* Oculta a lista inicialmente */
+.menu.card ul {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+/* Exibe a lista quando o menu está ativo */
+.menu.card ul.active {
+    max-height: 500px; /* Altura suficiente para mostrar o conteúdo */
+    opacity: 1;
+}
+
+.menu.card ul li {
+    margin: 10px 0;
+}
+
+.menu.card ul li button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #66CDAA;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu.card ul li button:hover {
+    background-color: #333;
+}
+
+.menu.card ul li a {
+    text-decoration: none;
+    color: snow;
+}
+
+/* Centraliza as cartas de menu */
+.menu {
+    display: flex;
+    background-color: #ffffff; /* Fundo branco para o card */
+    width: 45%; /* Largura do menu */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra do card */
+    display: inline-block; /* Alinhamento em bloco */
+    margin: 10px; /* Margem ao redor de cada card */
+    transition: transform 0.3s; /* Transição suave ao passar o mouse */
+}
+
+.menu:hover {
+    transform: translateY(-5px); /* Eleva o card ao passar o mouse */
+}
+
+.menu h2 {
+    text-align: center; /* Centraliza o título do menu */
+    color: #333; /* Cor do texto */
+    margin-bottom: 15px; /* Espaço abaixo do título */
+}
+
+.menu ul {
+    list-style: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margem */
+    width: 100%; /* Largura total para os itens da lista */
+}
+
+.menu button {
+    background-color: #1b956c; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove borda padrão */
+    border-radius: 5px; /* Bordas arredondadas do botão */
+    padding: 10px 15px; /* Espaçamento interno do botão */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave da cor de fundo */
+    width: 100%; /* Largura total do botão */
+    font-size: 1em; /* Tamanho da fonte do botão */
+    margin-bottom: 10px; /* Espaço abaixo do botão */
+}
+
+.menu button:hover {
+    background-color: #54B49C; /* Cor do botão ao passar o mouse */
+}
+
+/* Estilo para os formulários */
+.plano, .especialidade, .area {
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+/* Estilo para os cabeçalhos das seções de formulário */
+.plano h3, .especialidade h3, .area h3 {
+    color: #333; /* Cor do texto dos cabeçalhos */
+    margin-bottom: 10px; /* Espaço abaixo do cabeçalho */
+    text-align: center;
+}
+
+/* Estilo para os inputs e selects */
+.group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.group input,.group select {
+    position: relative;
+    width: 90%; /* Ajusta inputs e selects para ocupar toda a largura */
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    background: none;
+    transition: border-color 0.3s ease;
+}
+
+.group input:focus, .group select:focus {
+    border-color: #1b956c;
+    box-shadow: 0 0 5px rgba(27, 149, 108, 0.5);
+}
+
+/* Estilo para os labels */
+.group label {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 16px;
+    color: #464646;
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+
+/* Efeito de focar nos inputs para mover o label */
+.group input:focus + label,
+.group input:not(:placeholder-shown) + label,
+.group select:focus + label,
+.group select:valid + label { /* Adicionado para inputs e selects válidos */
+    transform: translateY(-25px);
+    font-size: 14px;
+    color: #66CDAA;
+}
+
+/* Estilo para os botões */
+button {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #66CDAA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #1b956c;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px); /* Leve elevação no hover para um efeito de profundidade */
+}
+
+/* Fundo opaco do modal */
+.modal {
+    display: none; /* Oculta por padrão */
+    position: fixed; /* Fixa o modal na tela */
+    z-index: 1000; /* Aparece sobre outros conteúdos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff; /* Fundo branco para o conteúdo do modal */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    width: 500px; /* Largura do modal */
+    text-align: center;
+}
+
+/* Botão de fechar modal */
+.close {
+    color: #aaa; /* Cor do botão fechar */
+    float: right; /* Alinha à direita */
+    font-size: 28px; /* Tamanho do botão fechar */
+    font-weight: bold; /* Negrito */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Altera cor ao passar o mouse */
+    text-decoration: none; /* Remove decoração */
+    cursor: pointer; /* Muda cursor para pointer */
+}
+
+.pop {
+    display: none; 
+    position: relative; 
+    z-index: 10; 
+    background-color: snow;
+    box-shadow: 5px 5px 15px; 
+    padding: 10px; 
+    border-radius: 10px;
+}
+
+#pair {
+    color: none;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Estilos gerais para a tabela */
+/* Estilos gerais para a tabela */
+/* Estilos Globais para Tabelas */
+table {
+    width: 90%; /* Ajusta a largura das tabelas para 90% do espaço disponível */
+    max-width: 600px; /* Define uma largura máxima para as tabelas */
+    margin: 20px auto; /* Centraliza a tabela com margens automáticas */
+    border-collapse: collapse; /* Remove espaçamento entre as células */
+    font-family: Arial, sans-serif; /* Fonte das tabelas */
+    background-color: #f8f4f8; /* Cor de fundo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para destaque */
+    border-radius: 8px; /* Bordas arredondadas */
+    overflow: hidden; /* Garante que bordas arredondadas sejam visíveis */
+}
+
+/* Estilos para cabeçalhos da tabela */
+thead {
+    background-color: #66CDAA; /* Cor de fundo dos cabeçalhos */
+    color: #fff; /* Cor do texto dos cabeçalhos */
+}
+
+thead th {
+    padding: 12px; /* Espaçamento interno dos cabeçalhos */
+    text-align: center; /* Centraliza o texto dos cabeçalhos */
+    font-size: 14px; /* Tamanho da fonte dos cabeçalhos */
+}
+
+/* Remover o efeito de hover nos títulos da tabela */
+thead th:hover {
+    background-color: #66CDAA; /* Mantém a cor de fundo original ao passar o mouse */
+}
+
+/* Estilos para linhas do corpo da tabela */
+tbody tr {
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1; /* Efeito de hover nas linhas do corpo da tabela */
+}
+
+tbody td {
+    padding: 8px; /* Espaçamento interno das células */
+    font-size: 15px; /* Tamanho da fonte das células */
+    border-top: 1px solid #ddd; /* Borda superior das células */
+    text-align: center;
+    font-weight: bolder;
+}
+
+/* Estilos dos ícones de ações */
+tbody td img {
+    width: 25px; /* Largura dos ícones */
+    height: 25px; /* Altura dos ícones */
+    cursor: pointer; /* Cursor de ponteiro para os ícones */
+    transition: transform 0.2s ease, background-color 0.3s ease; /* Transições suaves */
+    border-radius: 50%; /* Forma circular para os ícones */
+    padding: 6px; /* Preenchimento para os ícones */
+    border: 1px solid #ddd; /* Borda para destacar o ícone */
+    background-color: #fff; /* Cor de fundo dos ícones */
+}
+
+/* Efeito de hover nos ícones */
+tbody td img:hover {
+    transform: scale(1.2); /* Efeito de aumento ao passar o mouse */
+    background-color: #54B49C; /* Cor de fundo ao passar o mouse */
+    border-color: #5CBF8A; /* Altera a cor da borda ao passar o mouse */
+}
+
+/* Estilo dos campos de entrada */
+.edit-area {
+    width: 100%; /* Largura total do container */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Bordas cinzas */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+/* Estilo ao focar no input */
+.edit-area:focus {
+    border-color: #66CDAA; /* Mudança de cor da borda ao focar */
+    box-shadow: 
+        0 0 5px rgba(102, 205, 170, 0.5),   /* Sombra leve em verde */
+        0 0 10px rgba(102, 205, 170, 0.3),  /* Sombra média em verde */
+        0 0 15px rgba(102, 205, 170, 0.2);  /* Sombra mais difusa em verde */
+    outline: none; /* Remove o contorno padrão */
+}
+
+.popup-del-back {
+    position: fixed; /* Fixar a posição para cobrir a tela toda */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    z-index: 10000; /* Coloca atrás do popup */
+    display: none; /* Começa oculto */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.popup-del {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 40%;
+    height: 200px; /* Pode ajustar a altura conforme necessário */
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: opacity 0.5s;
+    display: flex; /* Alinha os elementos dentro do popup */
+    flex-direction: column; /* Coloca os elementos em coluna */
+    justify-content: center; /* Centraliza os elementos verticalmente */
+    text-align: center; /* Centraliza o texto */
+}
+
+.tabela input[type="text"] {
+    border: none; /* Remove a borda padrão */
+    background: transparent; /* Fundo transparente */
+    width: 100%; /* Preenche a célula */
+    padding: 8px; /* Adiciona espaçamento interno */
+    box-sizing: border-box; /* Inclui padding e border no cálculo de largura */
+    font-size: 16px; /* Ajusta o tamanho da fonte */
+}
+
+.tabela input[type="text"]:readonly {
+    background-color: #f0f0f0; /* Cor de fundo quando em modo somente leitura */
+    color: #666; /* Cor do texto */
+}
+
+
+#message-del {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 20px; /* Espaço entre a mensagem e os botões */
+}
+
+.popup-del button {
+    width: 80%;
+    height: 35px;
+    margin: 5px auto; /* Centraliza os botões e dá espaçamento */
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    cursor: pointer;
+    border: none; /* Remove a borda padrão */
+}
+
+.popup-del button:hover {
+    background-color: #1b956c;
+    color: #fff;
+}

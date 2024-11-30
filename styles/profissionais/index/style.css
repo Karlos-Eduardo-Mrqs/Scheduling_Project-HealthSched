@@ -1,0 +1,191 @@
+* { /* Todos os Itens */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { /* Corpo Da Página */
+    display: flex;
+    flex-direction: column;
+    background-color: snow;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.nav-bar { /* Barra De Navegação */
+    display: flex;
+    width: 100%;
+    background-color: #66CDAA;
+    height: 60px;
+    align-items: center;
+}
+
+.list-item { /*Lista de Itens*/
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+
+.item a { /*Item e Item Entrar(as ancoras)*/
+    border-radius: 15px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    width: fit-content;
+    padding: 15px;
+}
+
+.item a:hover, .item-entrar a:hover{ /*Item e Item Entrar(as ancoras) hover*/
+    background-color: #fff;
+    color: #464646;
+    transition: 0.3s ease-in;
+    width: fit-content;
+}
+
+.item-logo img { /*Item(É A Logo)*/
+    max-width: 100%;
+    margin: 10px;
+    border-radius: 10px;
+    height: 50px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto; /* Adiciona margem superior e inferior */
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+h2 {
+    color: #333;
+}
+
+.appointments {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.profile p, .appointments p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+/* Estilos gerais da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Estilo para o cabeçalho da tabela */
+thead {
+    background:  #48D1CC; /* Gradiente no cabeçalho */
+    color: white;
+}
+
+th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Estilo para as células de dados */
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilo para as linhas alternadas da tabela */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Efeito de hover nas linhas */
+tbody tr {
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+tbody tr:hover {
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efeito de sombra ao passar o mouse */
+}
+
+/* Estilos de mensagem de erro na tabela */
+table .error {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Estilos para a coluna de status com ícones */
+.status-confirmado::before {
+    content: "✔️"; /* Usando um emoji de confirmação */
+    color: green;
+}
+
+.status-pendente::before {
+    content: "🕒"; /* Usando um emoji de relógio para indicar pendência */
+    color: orange;
+}
+
+.status-cancelado::before {
+    content: "❌ "; /* Usando um emoji de X para indicar cancelamento */
+    color: red;
+}
+
+/* Estilos para ícones de status com espaçamento */
+.status-confirmado, .status-pendente, .status-cancelado {
+    font-weight: bolder;
+    font-size: 16px;
+    margin-left: auto;
+}
+
+.appointment-list {
+    margin-top: 20px;
+}
+
+.pop {
+    display: none; 
+    position: relative; 
+    z-index: 10; 
+    background-color: snow;
+    box-shadow: 5px 5px 15px; 
+    padding: 10px; 
+    border-radius: 10px;
+    text-align: center;
+}
+
+#pair {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
