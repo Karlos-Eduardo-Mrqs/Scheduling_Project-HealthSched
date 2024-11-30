@@ -25,8 +25,6 @@ Before you start, make sure you have everything ready to run **HealthSched**:
 
 2. **A reliable browser**: Chrome, Firefox or any other that allows you to explore the project. 🌐  
 
-3. **Git (optional)**: If you want to clone the project directly from the repository.  
-   👉 [Download Git here](https://git-scm.com/).
 ---
 
 # 🛠️ Installation and Configuration
