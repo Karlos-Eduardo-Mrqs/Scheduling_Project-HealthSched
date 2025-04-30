@@ -73,6 +73,8 @@ Confirm that the files have been extracted to the XAMPP htdocs folder. The path 
 # 💡 Transform the healthcare experience with HealthSched!
 Ready to digitize medical care and make life easier for patients and professionals? 🚀
 
+---
+
 # HealthSched 🏥 Versão BR
 ![image](https://github.com/user-attachments/assets/783a5b43-0818-4f81-b5e4-7f7a0add243f)
 ![image](https://github.com/user-attachments/assets/5b5bc460-c49d-49a5-a988-3ffd9caac7e1)
