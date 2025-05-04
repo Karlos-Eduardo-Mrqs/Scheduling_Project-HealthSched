@@ -6,6 +6,11 @@
 
 ---
 
+## 🌐 Versões Disponíveis
+
+- **[🇺🇸 Versão Americana](https://github.com/Karlos-Eduardo-Mrqs/Scheduling_Project-HealthSched/blob/main/README.md)**
+
+- **[🇧🇷 Versão Brasileira _você está aqui_](https://github.com/Karlos-Eduardo-Mrqs/Scheduling_Project-HealthSched/blob/main/README-BR.md)**
 
 
 ## 🌟 Sobre o Projeto

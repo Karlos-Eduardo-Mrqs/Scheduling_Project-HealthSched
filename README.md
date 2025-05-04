@@ -6,6 +6,13 @@
 
 ---
 
+## 🌐 Avaible Languages
+
+- **[🇺🇸 English Version _current_](https://github.com/Karlos-Eduardo-Mrqs/Scheduling_Project-HealthSched/blob/main/README.md)**
+- **[🇧🇷 Brasilian Version](https://github.com/Karlos-Eduardo-Mrqs/Scheduling_Project-HealthSched/blob/main/README-BR.md)**
+
+
+
 ## 🌟 About the Project
 
 Facilitate access to excellent health services, connecting patients to a qualified network of professionals such as doctors, dentists, physiotherapists, psychologists, nutritionists and trusted testing laboratories. 
