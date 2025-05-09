@@ -12,7 +12,7 @@
 
 - **[🇧🇷 Brasilian Version](https://github.com/Karlos-Eduardo-Mrqs/Scheduling_Project-HealthSched/blob/main/README-BR.md)**
 
-- **[ Spain Version](https://github.com/Karlos-Eduardo-Mrqs/Scheduling_Project-HealthSched/blob/main/README-ES.md)** 
+- **[🇪🇸 Spain Version](https://github.com/Karlos-Eduardo-Mrqs/Scheduling_Project-HealthSched/blob/main/README-ES.md)** 
 
 ## 🌟 About the Project
 
