@@ -8,7 +8,7 @@
 
 ## 🌐 Idiomas disponibles
 
-- **[🇪🇸 Versión España _estás aquí_](https://github.com/Karlos-Eduardo-Mrqs/Scheduling_Project-HealthSched/blob/main/README-ES.md)**
+- **[🇪🇸 Versión España *](https://github.com/Karlos-Eduardo-Mrqs/Scheduling_Project-HealthSched/blob/main/README-ES.md)**
 
 - **[🇺🇸 Versión americana](https://github.com/Karlos-Eduardo-Mrqs/Scheduling_Project-HealthSched/blob/main/README.md)**
 
